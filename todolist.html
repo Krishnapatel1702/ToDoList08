@@ -12,21 +12,54 @@
 
 </head>
 <body>
-<div class="container">
-    <form class="row g-3">
-        <div class="col-sm-8">
+<div class="container my-5">
+    <form class="row g-3 w-100">
+        <div class="col-lg-9">
           <!-- <label for="staticEmail2" class="visually-hidden"></label> -->
-          <input type="text"  class="form-control" id="inputToDo" value="Get Groceries....">
+          <input type="text"  class="form-control" id="inputTask" placeholder="Get Groceries....">
         </div>
-        <div class="col-sm-2">
+        <div class="col-lg-2">
           <!-- <label for="inputPassword2" class="visually-hidden">Password</label> -->
-          <input type="password" class="form-control" id="inputComplitionDate" placeholder="Completion date...">
+          <input type="date" class="form-control" id="inputstartDate" placeholder="start date..." value="Date.now()">
         </div>
-        <div class="col-sm-2">
-          <button type="submit" class="btn btn-primary mb-3">ADD</button>
+        <div class="col-lg-1">
+          <button type="button" class="btn btn-primary mb-3" onclick="AddItems(); return false;">ADD</button>
         </div>
     </form>
-</div>
+  </div>
+    <!-- open items -->
+    <div class="container my-5 w-70">
+        <div class="border">
+        <h1 class="text-center">OPEN ITEMS</h1>
+        <ul id="openitems">
+           
+        </ul>
+    </div>
+    </div>
+
+    <!-- closeitems -->
+    <div class="container my-5">
+      <div class="border">
+      <h1 class="text-center">CLOSED ITEMS</h1>
+      <ul id="closeitems">
+          <!-- <li>
+            
+            <input type="text" name="" id="inputEndDate" onchange="" value="mytask">
+             <input type="date" id="" >
+             <button type="button" onclick="" id="onEdit">EDIT</button>
+             <button type="submit" onclick="" id="onComplete">COMPLETED</button>
+          </li> -->
+      </ul>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>  
 </body>
