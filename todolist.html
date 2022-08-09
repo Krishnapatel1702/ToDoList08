@@ -13,6 +13,7 @@
 </head>
 <body>
 <div class="container my-5">
+  <h1 class="text-center">TO DO LIST</h1>
     <form class="row g-3 w-100">
         <div class="col-lg-9">
           <!-- <label for="staticEmail2" class="visually-hidden"></label> -->
@@ -20,7 +21,7 @@
         </div>
         <div class="col-lg-2">
           <!-- <label for="inputPassword2" class="visually-hidden">Password</label> -->
-          <input type="date" class="form-control" id="inputstartDate" placeholder="start date..." value="Date.now()">
+          <input type="date" class="form-control" id="inputstartDate" placeholder="start date...">
         </div>
         <div class="col-lg-1">
           <button type="button" class="btn btn-primary mb-3" onclick="AddItems(); return false;">ADD</button>
@@ -30,9 +31,9 @@
     <!-- open items -->
     <div class="container my-5 w-70">
         <div class="border">
-        <h1 class="text-center">OPEN ITEMS</h1>
+        <h3 class="text-center">OPEN ITEMS</h3>
         <ul id="openitems">
-           
+           <button type="button" onclick="OnEdit();" class="btn btn-primary">EDIT</button>
         </ul>
     </div>
     </div>
@@ -40,7 +41,7 @@
     <!-- closeitems -->
     <div class="container my-5">
       <div class="border">
-      <h1 class="text-center">CLOSED ITEMS</h1>
+      <h3 class="text-center">CLOSED ITEMS</h3>
       <ul id="closeitems">
           <!-- <li>
             

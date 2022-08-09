@@ -1,9 +1,8 @@
-// store data
-const todos = {}
 // for Add button
 
-function AddItems(e){
-   
+function AddItems(){
+// store data
+const todoItems= [];
 
     let list = document.createElement("li");
     let Taskval = document.getElementById("inputTask").value;
@@ -11,7 +10,7 @@ function AddItems(e){
     // let TaskEdit = document.getElementById();
 
     let Taskdate = document.getElementById("inputstartDate").value;
-    let TaskText = document.createTextNode(Taskval + " " + Taskdate +"  ");
+    let TaskText = document.createTextNode(Taskval + " " + Taskdate );
     list.appendChild(TaskText);
     console.log(TaskText);
     
@@ -20,43 +19,24 @@ function AddItems(e){
         alert("please add some task and date...");
     }
     else{
-        // document.getElementById("openitems").appendChild(list);
+        document.getElementById("openitems").appendChild(list);
         // document.createElement("") = todos;
+        
         const todos ={
-            text,
-            checked:false,
-            date : Date.now(),
+            text: Taskval,
+            // checked:false,
+            date : Taskdate
         };
     
         todoItems.push(todos);
         console.log(todoItems);
-
-    
-       
     }
+    localStorage.setItem("taskdetails",JSON.stringify(todoItems));
+}
+
+// for edit function
+function OnEdit(){
     
-
-    localStorage.setItem("taskdetails",JSON.stringify(todos));
-
-    // document.getElementById("inputTask").value ="";
-
-
-    e.preventDefalut();
+   let localvalue = JSON.parse(localStorage.getItem("taskdetails"));
+   console.log(localvalue);
 }
-
-
-const todoItems= [];
-
-function AddItems(text) {
-    const todos ={
-        text,
-        checked:false,
-        date : Date.now(),
-    };
-
-    todoItems.push(todos);
-    console.log(todoItems);
-}
-
-
-
